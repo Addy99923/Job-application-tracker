@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Job Application Tracker</title><link rel="stylesheet" href="/style.css"></head>
+<body><main class="wrap"><header><div><p class="eyebrow">CAREER ORGANIZER</p><h1>Job Application Tracker</h1><p class="muted">Keep every opportunity in one place.</p></div><span class="pill">Java · Spring Boot · MySQL</span></header>
+<section class="stats" id="stats"></section>
+<section class="panel"><h2 id="formTitle">Add an application</h2><form id="jobForm">
+<input type="hidden" id="editId"><div class="fields">
+<label>Company<input id="company" required maxlength="120" placeholder="Example: Acme Technologies"></label>
+<label>Role<input id="role" required maxlength="120" placeholder="Java Developer Intern"></label>
+<label>Application date<input id="applicationDate" type="date" required></label>
+<label>Status<select id="status"><option>APPLIED</option><option>ASSESSMENT</option><option>INTERVIEW</option><option>OFFER</option><option>REJECTED</option><option>WITHDRAWN</option></select></label>
+<label>Job URL<input id="jobUrl" type="url" placeholder="https://..."></label><label>Notes<input id="notes" maxlength="1000" placeholder="Recruiter, next steps, etc."></label></div>
+<div class="actions"><button type="submit">Save application</button><button type="button" class="secondary" id="cancelEdit">Clear</button></div><p id="message" role="status"></p></form></section>
+<section class="panel"><div class="toolbar"><h2>Your applications</h2><div><input id="search" placeholder="Search company or role"><select id="filter"><option value="">All statuses</option><option>APPLIED</option><option>ASSESSMENT</option><option>INTERVIEW</option><option>OFFER</option><option>REJECTED</option><option>WITHDRAWN</option></select></div></div><div class="tableWrap"><table><thead><tr><th>Company / Role</th><th>Date</th><th>Status</th><th>Notes</th><th>Actions</th></tr></thead><tbody id="rows"></tbody></table></div></section>
+<footer>Demo project · Data is stored in your local MySQL database.</footer></main><script src="/app.js"></script></body></html>
